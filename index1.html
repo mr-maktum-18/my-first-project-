@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todo app</title>
+  <link rel="stylesheet" href="css.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+
+    <!-- 1 FIRST CONTAINER -->
+
+    <div class="first-container">
+      <!-- BOX GENERAL -->
+      <div id="general" onclick="generalFunction()">
+        <div id="line1"></div>
+
+        <div class="print">
+          <p class="general1">General</p>
+
+          <div class="taskcount">
+            <p id="tasks">Tasks</p>
+            <p id="general-count" class="count1">0</p>
+          </div>
+
+        </div>
+      </div>
+      <!-- BOX MEETING -->
+      <div id="meeting" onclick="meetingFunction()">
+        <div id="line2"></div>
+
+        <div class="print">
+          <p class="general1">Meetings</p>
+
+          <div class="taskcount">
+            <p id="tasks">Tasks</p>
+            <p id="meeting-count" class="count1">0</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BOX TRIP -->
+      <div id="trip" onclick="tripFunction()">
+        <div id="line3"></div>
+
+        <div class="print">
+          <p class="general1">Trips</p>
+          <div class="taskcount">
+            <p id="tasks">Tasks</p>
+            <p id="trip-count" class="count1">0</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="custom">
+        <div id="button1">
+          <button id="today">Today</button>
+          <button id="tomorrow">Tomorrow</button>
+        </div>
+
+        <div id="button2">
+          <button id="design" onclick="resetFunction() ,addTask()">Design</button>
+          <button id="Home" onclick="generalFunction()">Home</button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- 2 SECOND CONTAINER -->
+
+    <!-- 2-1 MAIN CONTAINER -->
+    <div class="second-container">
+
+      <!-- 2-1-1  BAR CONAINER -->
+
+
+      <div id="bar3-container">
+        <div id="bar3-1">TODO APP</div>
+      </div>
+
+
+      <div id="bar-container">
+
+
+        <div id="bar1" onclick="nextDateTimeMeeting()">
+          <h5 class="nx-meet "> Next Meeting</h5>
+          <h3 id="bar1-name"></h3>
+          <h3 id="bar1-date"></h3>
+          <h3 id="bar1-time">click here</h3>
+        </div>
+
+        <div id="bar2" onclick="nextDateTimeGeneral()">
+          <h5 class="nx-meet ">Next General</h5>
+          <h3 id="bar2-name"></h3>
+          <h3 id="bar2-date"></h3>
+          <h3 id="bar2-time">click here</h3>
+        </div>
+      </div>
+
+
+
+
+      <!-- 2-2-1 BAR CONAINER -->
+      <div id="bar2-container">
+
+        <!-- 2-2-2-1 BAR CONAINER -->
+        <div id="bar2-1">
+
+          <body>
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            <script src="chartjs.js"></script>
+          </body>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- THERD CONTAINER -->
+
+    <div class="therd-container">
+      <div id="note">
+
+        <h2 id="heading">Note</h2>
+
+        <div id="choose-opt">
+          <label id="option" for="option">Choose a option:</label>
+
+          <select id="options">
+            <option></option>
+            <option value="general">general</option>
+            <option value="meeting">meeting</option>
+            <option value="trip">trip</option>
+          </select>
+        </div>
+
+        <div id="date-time">
+          <input id="date" type="date">
+
+          <input id="time" type="time" name="time">
+        </div>
+
+        <div id="name">
+          <input id="namet" type="text" name="name" placeholder="Enter Name" required />
+        </div>
+
+        <div id="msg">
+          <textarea id="msgt" rows="10" cols="32" name="text" placeholder="Enter Note"></textarea>
+        </div>
+
+        <div id="button-main">
+          <button onclick="addTask()" id="main-button">ADD TASK</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
